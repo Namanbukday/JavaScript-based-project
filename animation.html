@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .c1{
+                position: relative;
+                height: 250px;
+                width:250px;
+                border: black solid;
+                border-radius: 50%;
+                margin: auto;
+            }
+            #anim{
+                animation-name: moving-color;
+                animation-duration: 2s;
+                animation-fill-mode:forwards ;
+                animation-iteration-count: 5;
+                animation-timing-function:linear;
+            }
+            @keyframes moving-color {
+                0%{
+                    background: repeating-linear-gradient(90deg, cyan, pink, lightgreen);
+                    top: 20px;
+                }
+                50%{
+                    background: repeating-linear-gradient(180deg, cyan, pink, lightgreen);
+                    bottom: 100px;
+                    height: 200px;
+                    width: 200px;
+                }
+                75%{
+                    background: repeating-linear-gradient(180deg, rgb(35, 65, 65), rgb(238, 17, 17), rgb(128, 120, 52));
+                    top: 100px;
+                    height: 300px;
+                    width: 300px;
+                }
+                100%{
+                    background: repeating-linear-gradient(90deg, cyan, pink, lightgreen);
+                    top: 0px;
+                }
+            }
+            /* @media (max-width:400px) {
+                div{
+                background-color: rgb(150, 11, 123);
+            }} */
+        </style>
+    </head>
+    <body>
+        <!-- <nav accesskey="n">
+            bbbbbbbbbbbbb
+        </nav> -->
+        <div id="anim" class="c1">
+        </div>
+        <!-- <footer>
+            bbbbbbbbbbbbbbbbbbb
+        </footer> -->
+    </body>
+</html>
