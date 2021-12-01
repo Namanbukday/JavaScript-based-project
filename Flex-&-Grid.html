@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .c1{
+                background-color: cyan;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            #anim{
+                animation-name: movell;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 6;
+            }
+            @keyframes movell{
+                0%{
+                    top: 0px;  
+                }
+                50%{
+                    bottom:150px;
+                }
+                100%{
+                    top: 0px;  
+                }
+            }
+            .c2{
+                background-color: rgb(253, 41, 129);
+                height: 50px;
+                width: 50px;
+            }
+            .c3{
+                background-color: rgb(27, 210, 235);
+                height: 50px;
+                width: 50px;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div class="c1" id="anim">
+            <div class="c2"></div>
+            <div class="c3"></div>
+        </div>
+    </body>
+</html>
