@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        // #1........ NORMAL FUCNTION INVOKING
+        /*function myfunction() {
+            alert("hello world");
+        }
+        myfunction();*/
+
+        // #2........INVOKING FUCNTION AS A CONST
+        /*const myfunction = function () {
+            alert("hello world");
+        }
+        myfunction();*/
+
+        // #3........FUCNTION WITH PARAMETERS
+        /*function myfunction(argum1, argum2) {
+            let x = argum1, y = argum2;
+            let result = x + y;
+            alert(result);
+        }
+        myfunction(5, 10);*/
+
+        // #4........GLOBAL & LOCAL SCOPE
+        let x = 1;
+        function myfunction(a, b) {
+            let result = a + b;
+            let result2 = a + b + x;
+        }
+        myfunction(2, 3);
+        alert(result);
+        alert(result2);
+    </script>
+</body>
+
+</html>
