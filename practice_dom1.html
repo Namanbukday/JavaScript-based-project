@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head id="head">
+        <script src = "practice_dom1.js" defer></script>
+    </head>
+    <body>
+        <style>
+            body{
+                background-color: rgb(112, 105, 96);
+            }
+            .display{
+                width: 100px;
+                height: 100px;
+                background-color: rgb(120, 156, 35);
+            }
+            button{
+                color: rgb(231, 124, 124);
+                border-radius: 25%;
+                font-family: cursive;
+            }
+        </style>
+        <div id = "container">
+            <!-- <div class="display"></div>
+            <div class="controls"></div> -->
+        </div>
+        <!-- Events : Method 1 = attaching functions attribute in your html element-->
+        <button onclick="alert('mthod 1 was used..you pressed this button')">CLICK ME</button>
+
+        <!-- Events : Method 2 = using " onEvent"(ex. onclick) in JS using arrow function ; look in js file-->
+        <button id="b1">Click Me!!!!!!!!!</button>
+    </body>
+</html>

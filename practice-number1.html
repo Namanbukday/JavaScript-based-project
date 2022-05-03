@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <img src="D:\naman\FrontEnd\JS-Practice-Site\Images\countach.jpg">
+        <title>All IN ONE</title>
+        <style>
+            :root{
+                --custom-color:cyan;
+            }
+            body{
+                /* float: right; */
+                /* background: url(D:\naman\FrontEnd\JS-Practice-Site\Images\countach.jpg); */
+                background-color: rgb(168, 190, 107);
+            }
+            .formClass{
+                background : linear-gradient(45deg, red, violet,lightblue); /* differnet colors merged up */
+                /* background : linear-gradient(90deg, red 0px, violet 33px,lightblue 66px); differnet colors merged up */
+                position: relative;
+                text-align: center;
+                margin-top: 50px ;
+                padding-top: 50px;
+                width: 300px;
+                height: 180px;
+                border-radius: 25%;
+                font-size: 18px;
+                font-family: sans-serif, 'Times New Roman', Times, serif;
+                opacity: 0.8;
+            }
+            .colorit{
+                color:rgb(3, 3, 3);
+            }
+            .borders{
+                border-color: var(--custom-color);
+                border-style: solid;
+                border-width: 3px;
+                box-shadow: 10px 10px gold;
+                transform: scale(1,1);
+            }
+            #temp{
+                background : repeating-linear-gradient(90deg, red 0px, violet 33px,lightblue 66px);
+                margin-top: 50px ;
+                padding-top: 50px;
+                width: 300px;
+                height: 180px;
+                border-radius: 25%;
+                opacity: 0.8;
+            }
+            .animOnForm{
+                animation-name: firstAnim;
+                animation-duration: 3s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 2;
+                animation-timing-function: ease;
+            }
+            @keyframes firstAnim{
+                0%{
+                    background: linear-gradient(45deg, rgb(238, 130, 171), violet,rgb(212, 173, 230));
+                   top: 0px;
+                }
+                50%{
+                    background : linear-gradient(45deg, rgb(251, 255, 0), rgb(130, 225, 238),rgb(194, 230, 173));
+                    top: 50%;        /* this willl show movement from left to right. */
+                    /* left: 100px;     */
+                    opacity: 0.5;
+                }
+                100%{
+                    top: 0px;
+                }
+            }
+            .animOnTemp{
+                animation-name: secondAnim;
+                animation-duration: 3s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 2;
+                animation-timing-function: ease;
+            }
+            @keyframes secondAnim{
+                0%{
+                    background: linear-gradient(45deg, rgb(238, 130, 171), violet,rgb(212, 173, 230));
+                   left: 0px;
+                }
+                50%{
+                    background : linear-gradient(45deg, rgb(251, 255, 0), rgb(130, 225, 238),rgb(194, 230, 173));
+                    left: 50%;        /* this willl show movement from left to right. */
+                    /* left: 100px;     */
+                    opacity: 0.5;
+                }
+                100%{
+                    left: 0px;
+                }
+            }
+            #forFlex{
+                display: flex;
+                flex-direction: row;
+                /* justify-content: space-around; */
+                height: 40px;
+                max-width: 100%;
+                /* background-color: darkgray; */
+                
+            }
+            .forminiFlex{
+                margin-top: 10px;
+                margin-left: 10px;
+                position: relative;
+                height: 20px;
+                width: 20px;
+                border-color: blanchedalmond;
+                border-radius: 35%;
+                background-color: rgb(248, 199, 140);
+            }
+
+            .animOnflex{
+                animation-name: animOnFlex;
+                animation-duration: 3s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 5;
+                animation-timing-function:ease-out;
+            }
+            @keyframes animOnFlex{
+                0%{
+                    background: linear-gradient(45deg, rgb(238, 130, 171), violet,rgb(212, 173, 230));
+                   left: 0px;
+                }
+                50%{
+                    background : linear-gradient(45deg, rgb(251, 255, 0), rgb(130, 225, 238),rgb(194, 230, 173));
+                    left: 50%;        /* this willl show movement from left to right. */
+                    /* left: 100px;     */
+                    opacity: 0;
+                }
+                100%{
+                    left: 0px;
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>    
+        <br>
+            <a href = '#'>press this</a>
+            <ul>
+            <li>audi</li>
+            <li>mesaratti</li>    
+        </ul>
+        <ol>
+            <li>pagani zonda</li>
+            <li>ferrari 812 superfast</li>
+        </ol>
+        <input type="text" placeholder="describe content">
+        <br>
+        <br>
+        <div id="forFlex">
+            <div class="forminiFlex animOnflex"></div>
+            <div class="forminiFlex animOnflex"></div>
+            <div class="forminiFlex animOnflex"></div>
+            <div class="forminiFlex animOnflex"></div>
+            <div class="forminiFlex animOnflex"></div>
+        </div>
+        <div>
+            <form class="colorit borders formClass animOnForm" id="animOnForm"> <br>
+                <input type="text" placeholder="what type of car do you like?" required><br>
+                <label for="radiobutton1">
+                    <br><input type="radio" id = "radiobutton1" value="donut">donut
+                </label>
+                <label for="checkbox1">
+                    <input type="checkbox" id = "checkbox1" value="drift">drift
+                </label><br>
+                <br>
+                <button type="submit">Press to submit your answer</button>
+            </form>
+        </div>
+        <div id="temp" class="borders formClass animOnTemp"></div>
+    </body>
+</html>

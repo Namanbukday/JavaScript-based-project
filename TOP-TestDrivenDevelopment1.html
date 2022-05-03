@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            /* TEST 1 : HELLO WORLD 
+            const helloWorld = function() {
+                return 'helloWorld' ;
+            };
+            console.log(helloWorld());
+            */
+
+            /* TEST 2 : repeatString
+            let result = '';
+            const str1 = prompt("enter a string :");
+            for(let i = 1; i<=3; i++){
+                result += str1;
+            }
+            console.log(result);
+             */
+
+            /* TEST 3 : reverseString
+            let str1 = prompt("enter a string and i'll reverse it.")
+            let lengthOfString = str1.length;
+            let result = '';
+            for(let i = lengthOfString; i > 0; i--){
+                let s = 's';
+                let ss = s+i;
+                ss= str1.slice(i-1,i);
+                result = result + ss; 
+            }
+            console.log(result);
+            */
+
+            /* TEST 4 : removeFromArray 
+            function removeFromArray(originalArray, removeArg){
+                /*for(let i = 0; i < originalArray.length; i++){
+                    if(removeArg == originalArray[i]){
+                        originalArray[i];
+                    }
+                    else continue;
+                }*/
+                /*
+                let newArray = [];
+                for(i=0; i< originalArray.length;i++){
+                    if(removeArg != originalArray[i]){
+                        newArray[i] = originalArray.push(i);
+                    }
+                    else {
+                        continue;
+                    }
+                }
+                for(i=0; i< originalArray.length;i++){
+                    console.log(newArray[i]);
+                }
+            }
+            let numberArray = [1,2,3,4,5,6,7,8,9];
+            let removeArg = prompt("enter a number from 1 to 10 that you dont want in your array");
+            removeFromArray(numberArray, removeArg); 
+            */
+            /*  TOP SOLUTION 
+            // we have 2 solutions here, an easier one and a more advanced one.
+            // The easiest way to get an array of all of the arguments that are passed to a function
+            // is using the spread operator.  If this is unfamiliar to you look it up!
+            const removeFromArray = function (...args) {
+            // the very first item in our list of arguments is the array, we pull it out with args[0]
+            const array = args[0];
+            // create a new empty array
+            const newArray = [];
+            // use forEach to go through the array
+            array.forEach((item) => {
+                // push every element into the new array
+                // UNLESS it is included in the function arguments
+                // so we create a new array with every item, except those that should be removed
+                if (!args.includes(item)) {
+                newArray.push(item);
+                }
+            });
+            // and return that array
+            return newArray;
+            };
+
+            // A simpler, but more advanced way to do it is to use the 'filter' function,
+            // which basically does what we did with the forEach above.
+
+            // var removeFromArray = function(...args) {
+            //   const array = args[0]
+            //   return array.filter(val => !args.includes(val))
+            // }
+            //
+            */
+        </script>
+    </body>
+</html>
