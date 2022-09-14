@@ -69,8 +69,8 @@ instanceForButton.onclick = functionForEvents;
 
 const btn = document.querySelector('#b1');
 btn.addEventListener('click', functionForEvents(e){
-console.log(e);
-});
+    console.log(e);
+    });
 
 
 

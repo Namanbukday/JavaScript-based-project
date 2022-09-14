@@ -46,7 +46,7 @@ function game(x,m){
     }
 }
 for (let i = 0; i<5; i++){
-    m = prompt("rock , paper or scissor")
+    m = prompt("rock , paper or scissor");
     m = m.toLowerCase();
     let x = computerPlay();
     game(x,m);

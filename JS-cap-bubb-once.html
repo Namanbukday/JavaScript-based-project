@@ -1,0 +1,89 @@
+
+<!-- IN THIS DOCUMENT, WE'LL LEARN ABOUT EVENT CAPTURE, BUBBLING STOP PROPAGATION AND ONCE.
+
+* Event bubbling and capturing are two ways of event propagation in the HTML DOM API, 
+  when an event occurs in an element inside another element, and both elements have registered a handle for that event. 
+  The event propagation mode determines in which order the elements receive the event.
+
+* With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+
+* With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+
+* Capturing is also called "trickling", which helps remember the propagation order:
+
+  --trickle down, bubble up.
+
+* We can use the addEventListener(type, listener, useCapture) to register event handlers for in either bubbling (default) or capturing mode. 
+  To use the capturing model pass the third argument as true.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding JavaScript's Capture</title>
+</head>
+<body class="bod">
+
+<!-- HERE THREE DIVS ARE NESTED INTO ONE ANOTHER -->
+  <div class="one">
+    <div class="two">
+      <div class="three">
+      </div>
+    </div>
+  </div>
+
+<style>
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after { 
+    box-sizing: inherit; 
+  }
+
+  div {
+    width: 100%;
+    padding: 100px;
+  }
+
+  .one {
+    background: thistle;
+  }
+
+  .two {
+    background: mistyrose;
+  }
+
+  .three {
+    background: coral;
+  }
+</style>
+
+<button></button>
+<script>
+  const divs = document.querySelectorAll('div');
+  const button = document.querySelector('button');
+
+  function logText(e) { // TO LOG WHEN SOMEONE CLICK A DIV
+     // VALUE WILL GIVE THE VALUE/DATA PRESENT IN THE CLASS OF THE DIV
+     // "THIS" HERE MEANS
+    console.log(this.classList.value);
+    // e.stopPropagation(); // stop bubbling!
+    // console.log(this);
+  }
+
+  // ADDING EVENTS TO EACH DIV
+  divs.forEach(div => div.addEventListener('click', logText, {
+    capture: false, // HERE "CAPTURE: FALSE" MEANS BUBBLING WILL OCCUR.
+    once: true // THIS MEANS EVENT WILL OCCUR ONLY ONCE.
+  }));
+
+  button.addEventListener('click', () => {
+    console.log('Click!!!');
+  }, {
+    once: true
+  });
+
+</script>
+</body>
+</html>
