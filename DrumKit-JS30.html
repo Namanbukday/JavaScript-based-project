@@ -79,7 +79,7 @@ function playSound(e){
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   
   //to add transition effects to the corresponding keys, 
-  //first we have to select the specific keys which have keycode.
+  //FIRST we have to select the specific keys which have keycode.
   const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
   
   // if there's no audio attach to the pressed key.

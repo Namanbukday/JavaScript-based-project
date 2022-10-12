@@ -1,0 +1,35 @@
+html {
+  font-size: 10px;
+  background: url("Images/ferrari.jpg");
+  height: auto;
+  background-size: cover;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+.gridContainer{
+	display:grid;
+	/* this line is used to create columns in a grid*/
+	/* no. of values = no. of columns; same for rows*/
+	grid-template-columns : repeat(16,1fr);
+	grid-template-rows : repeat(16,1fr);
+	/*grid-column-gap : 10px;
+	grid-row-gap: 10px;*/
+	grid-gap: 10px 10px;
+	color: black;
+}
+
+.gridItems{
+	height: 51px;
+	width: 51px;
+	background: rgba(150, 213, 169, 0.59);
+	border-radius: 3.5rem;
+	/*grid-column: 1/3;
+	grid-row : 1/3;*/
+	justify-self : center;
+}
